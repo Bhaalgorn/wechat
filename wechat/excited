@@ -559,7 +559,7 @@ if (ishttp && typeof MutationObserver === 'function') {
   </script>
   <script type="text/javascript">
             window.isSg=true;
-        window.sg_qr_code="/rr?timestamp=1463378856&src=3&ver=1&signature=SeAg4GcJckWAbc35nf4JMwGQ3hzDz0cidEuGE8DIm-2OjJDE3VFbHxy4pz84G2BDeYOCNEAlDBqCHjlyM**Y945sb49L1ZJgK1IDx35M-18=";
+        window.sg_qr_code="/rr?timestamp=1463383176&src=3&ver=1&signature=GDJr1VAELJdy3ibeGdSuuVb*KP-GUgDOFMiKZWlIlt4x3zyo0I8FNzYanHiCnFySZS4BPct4GyA9L-AVN4m*sl75YhXVFrOgPiMeW6sMsoc=";
         window.sg_data={
             src:"3",
             ver:"1",
