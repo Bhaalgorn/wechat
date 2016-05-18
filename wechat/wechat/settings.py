@@ -13,6 +13,7 @@ BOT_NAME = 'wechat'
 
 SPIDER_MODULES = ['wechat.spiders']
 NEWSPIDER_MODULE = 'wechat.spiders'
+ITEM_PIPELINES = {'wechat.pipelines.WechatPipeline': 300}
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

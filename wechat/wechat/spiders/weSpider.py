@@ -1,4 +1,4 @@
-#coding=gbk
+# -*- coding: utf-8 -*-
 import scrapy
 import re
 from scrapy.selector import Selector
@@ -13,10 +13,12 @@ class weSpider(scrapy.spiders.Spider):
         item = WechatItem()
         a = sel.xpath('//h2[@class="rich_media_title"][1]')
         item['title'] = a.xpath("text()").extract()
+        b = sel.xpath('//p[@class=style="margin-bottom: 25px;"]')
+        item['body'] = b.xpath("text()").extract()
         yield item
         #a = str(a)
         #m = re.match('^\[u\'(.*?)\'\]$',a)
-        #print 'ÄãºÃ'
+        #print 'ï¿½ï¿½ï¿½'
         #s = m.group(1)
         #print s
         #s = s.encode('utf-8')
