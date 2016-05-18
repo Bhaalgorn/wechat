@@ -1,5 +1,6 @@
-#coding=utf-8
+#coding=gbk
 import scrapy
+import re
 from scrapy.selector import Selector
 from scrapy.http import Request
 from wechat.items import WechatItem
@@ -10,10 +11,16 @@ class weSpider(scrapy.spiders.Spider):
     def parse(self,response):
         sel =Selector(response)
         item = WechatItem()
-        a = sel.xpath("//title")
-        a = a.xpath("text()").extract()
-        a = str(a)
-        print a
-        f = open('native.txt','w')
-        f.write(a)
-        f.close()
+        a = sel.xpath('//h2[@class="rich_media_title"][1]')
+        item['title'] = a.xpath("text()").extract()
+        yield item
+        #a = str(a)
+        #m = re.match('^\[u\'(.*?)\'\]$',a)
+        #print 'ÄãºÃ'
+        #s = m.group(1)
+        #print s
+        #s = s.encode('utf-8')
+        #print s
+        #f = open('native1.txt','w')
+        #f.write(a)
+        #f.close()
